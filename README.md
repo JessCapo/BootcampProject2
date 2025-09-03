@@ -1,2 +1,2 @@
 # BootcampProject2
-An application to search for different gifs based on keyword search.
+An application to search for different plants and plant health based on images.
