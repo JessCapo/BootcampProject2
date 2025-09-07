@@ -1,4 +1,23 @@
-$(document).ready(()=>{
+const API_KEY = "LfUYO0VUrTKutbnInqhNScVRyyqFEELHDKfHannFhwfLeI3L7b";
+const API_URL = `https://api.plant.id/v2/image_search?api-key=${LfUYO0VUrTKutbnInqhNScVRyyqFEELHDKfHannFhwfLeI3L7b}`;
+
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $(document).ready(()=>{
     $("#submit").click(()=>{
         let userInput = $("#search").val()
         //alert(userInput)
