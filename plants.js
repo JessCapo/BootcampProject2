@@ -3,6 +3,34 @@ const API_URL = `https://api.plant.id/v2/image_search?api-key=${LfUYO0VUrTKutbnI
 
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
+const resultsContainer = document.getElementById('results-container');
+
+async function searchImages() {
+    const query = searchInput.ariaValueMax.trim();
+
+    if (!query) {
+        alert("Please enter a plant name to search");
+        return;
+    }
+    //Clear previous results
+    resultsContainer.innerHTML = '';
+
+    try{
+        const response = await fetch(`${`https://api.plant.id/v2/image_search?api-key=${LfUYO0VUrTKutbnInqhNScVRyyqFEELHDKfHannFhwfLeI3L7b}`}&q=${encodeURIComponent(query)}`);
+        const data = await response.json();
+
+        if (data.results && data.results.length > 0) {
+            displayImages(data.results);
+        } else {
+            resultsContainer.innerHTML = '<p>No images found for that plant. Try another name.</p>';
+        }
+        } catch (error) {
+            console.error("Error fetching images.", error);
+            resultsContainer.innerHTML = 
+        }
+
+    }
+}
 
 
 
