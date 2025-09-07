@@ -27,10 +27,27 @@ async function searchImages() {
         } catch (error) {
             console.error("Error fetching images.", error);
             resultsContainer.innerHTML = '<p>Something went wrong. Please try again later.</p>';
-
         }
-
     }
+
+    function displayImages(images) {
+        images.forEach(plant => {
+            const imageElement = document.createElement('img');
+        
+            imageElement.src = plant.url;
+            imageElement.alt = plant.name;
+            imageElement.classList.add('plant-image');
+            resultsContainer.appendChild(imageElement);
+        });
+    }
+
+    //Event Listeners
+    searchButton.addEventListener('click', searchImages);
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            searchImages();
+        }
+    });
 
 
 
