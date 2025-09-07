@@ -1,24 +1,16 @@
-const categoryContainer = document.querySelector('.js-category-container')
+$(document).ready(()=>{
 
-function loadCategories() {
-    fetch('https://my-api.plantnet.org/v2/identify/all?api-key=2b10jjhQC8Otf6gYnhXG0s3Ve')
-    .then(data => data.json())
-    .then(response => {
-        const categories = response.categories;
-        
+    $.ajax({
+        url:https:'//perenual.com/api/v2/species-list?key=sk-OhIh68bd8913791b012262'
 
-        categoriesContainer.innerHTML = categories
-            .map(category => `
-                <div class="category-item" data-id="${category.idCategory}">
-                    <h2>${category.strCategory}</h2>
-                    <img 
-                        src="${category.strCategoryThumb}" 
-                        alt="${category.strCategory}" />
-                    <p>${category.strCategoryDescription}</p>
-                </div>
-            `)
+
+    })
 
 
 
-    });
-}
+
+})
+
+//sk-OhIh68bd8913791b012262
+///species-care-guide-list
+//'https://perneual.com/api/v2/species-list'
