@@ -26,11 +26,12 @@ async function searchImages() {
         }
         } catch (error) {
             console.error("Error fetching images.", error);
-            resultsContainer.innerHTML = 
+            resultsContainer.innerHTML = '<p>Something went wrong. Please try again later.</p>';
+
         }
 
     }
-}
+
 
 
 
