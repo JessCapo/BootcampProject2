@@ -51,46 +51,35 @@ h1{
 
 .results-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 1200px;
     justify-content: center;
+    margin: 0 auto;
+    width: 100%; /* Make images fill their grid cell */
+    height: 200px; /* Example fixed height for all images */
+    object-fit: cover; /* Crop images to fit without distortion */
+    display: block; /* Remove extra space below images */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
-.plant-image:hover {
-    transform: scale(1.05);
-}
-
-.image-grid-container {
-  display: grid;
-  /* Define columns: 3 columns, each taking an equal fraction of the available space */
-  grid-template-columns: repeat(3, 1fr);
-  
-  /* Define the gap between grid items */
-  gap: 16px; /* Or any value you prefer, e.g., 1rem */
-
-  /* Optional: Center the grid if it doesn't take up the full width */
-  max-width: 1200px; /* Example max width */
-  margin: 0 auto;
-}
-
-.image-grid-container img {
-  width: 100%; /* Make images fill their grid cell */
-  height: 200px; /* Example fixed height for all images */
-  object-fit: cover; /* Crop images to fit without distortion */
-  display: block; /* Remove extra space below images */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-}
-
-/* Optional: Responsive adjustments */
 @media (max-width: 768px) {
-  .image-grid-container {
+  .results-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
 }
 
+
 @media (max-width: 480px) {
-  .image-grid-container {
+  .results-container {
     grid-template-columns: 1fr; /* 1 column on small screens */
   }
 } 
+.dog-image:hover {
+    transform: scale(1.05);
+}
+
+
+
+
