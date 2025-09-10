@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="container">
     <h1>🐾🐕🐩🐾 Dog Breed Image Finder 🐾🐕🐩🐾 </h1>
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Enter Plant Name"/>
+
+        <div class="search-container">
+         <input type="text" id="breed-input" placeholder="Search Breed"/>
         
-        <button id="search-button">Search</button>
+            <button id="search-button">Search Breed</button>
+        </div>
+
+        <div id="message" class="message"></div>
+        <div id="imageResults" class="dog-breed-grid"></div>
     </div>
 
-    <div class="results-container" id="results-container"></div>
     <script src="dogs.js" defer></script>
 </body>
 </html>
