@@ -51,31 +51,42 @@ h1{
 
 .results-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 200px;
-    margin: 0 auto;
-    object-fit: cover; /* Crop images to fit without distortion */
-    display: block; /* Remove extra space below images */
+    padding: 20px;
     justify-content: center;
-    
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
 }
 
-@media (max-width: 768px) {
+.dog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.dog-image:hover {
+    transform: scale(1.2);
+}
+
+/*Responsive Grid with Media Queries */
+
+@media (min-width: 768px) {
   .results-container {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
 }
 
-
-@media (max-width: 480px) {
+/* Large screens */
+@media (min-width: 1024px) {
   .results-container {
-    grid-template-columns: 1fr; /* 1 column on small screens */
+    grid-template-columns:repeat(3, 1fr);
   }
 } 
-.dog-image:hover {
-    transform: scale(1.2);
-}
+
+
 
 
 
