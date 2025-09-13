@@ -86,6 +86,25 @@ h1{
   }
 } 
 
+.nav-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.nav-container a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    flex-direction: row; /* Switch to horizontal layout on desktop */
+    justify-content: space-around; /* Distribute items evenly */
+  }
+}
+
 
 
 
