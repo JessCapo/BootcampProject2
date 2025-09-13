@@ -75,7 +75,7 @@ h1{
 
 @media (min-width: 768px) {
   .results-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(1, 1fr); 
   }
 }
 
@@ -85,6 +85,12 @@ h1{
     grid-template-columns:repeat(3, 1fr);
   }
 } 
+
+.page-container {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+}
 
 .nav-container {
   display: flex;
@@ -104,6 +110,8 @@ h1{
     justify-content: space-around; /* Distribute items evenly */
   }
 }
+
+
 
 
 
